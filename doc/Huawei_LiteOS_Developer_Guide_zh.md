@@ -454,7 +454,7 @@ static UINT32 Example_TaskHi(VOID)
         return LOS_NOK;
     }
 
-    /*2个tick时间到了后，该任务恢复，继续执行*/
+    /*5个tick时间到了后，该任务恢复，继续执行*/
     dprintf("TaskHi LOS_TaskDelay Done.\r\n");
 
     /*挂起自身任务*/
@@ -470,7 +470,7 @@ static UINT32 Example_TaskHi(VOID)
         return LOS_NOK;
     }
     
-    dprintf("TaskHi LOS_TaskResume Success.\r\n");
+    dprintf("TaskHi LOS_TaskSuspend Success.\r\n");
         
     uwRet = LOS_InspectStatusSetByID(LOS_INSPECT_TASK,LOS_INSPECT_STU_SUCCESS);
     if (LOS_OK != uwRet)
